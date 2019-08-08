@@ -1,0 +1,153 @@
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <label for="name">Razão Social*</label>
+        <input type="text" formControlValidation formControlDisplayName="razão social" formControlName="name" id="name"
+          autocomplete="off" class="form-control form-input" />
+        <div class="invalid-feedback"></div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <label for="nicename">Nome fantasia*</label>
+        <input type="text" formControlValidation formControlDisplayName="nome fantasia" formControlName="nicename"
+          id="nicename" autocomplete="off" class="form-control form-input" />
+        <div class="invalid-feedback"></div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <label for="nickname">Apelido</label>
+        <input type="text" formControlValidation formControlDisplayName="apelido" formControlName="nickname"
+          id="nickname" autocomplete="off" class="form-control form-input" />
+        <div class="invalid-feedback"></div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <label for="document">CNPJ*</label>
+        <input type="text" formControlValidation formControlDisplayName="CNPJ" formControlName="document" id="document"
+          autocomplete="off" class="form-control form-input" mask='00.000.000/0000-00' />
+        <div class="invalid-feedback"></div>
+      </div>
+      <div class="col-sm-12 col-md-2">
+        <label for="clientCode">Código do Cliente</label>
+        <input type="text" formControlName="clientCode" id="clientCode" autocomplete="off"
+          class="form-control form-input" />
+      </div>
+    </div>
+  </div> <!-- </form-group> -->
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <label for="stateRegistration">Inscrição estadual</label>
+        <input type="text" formControlName="stateRegistration" id="stateRegistration" autocomplete="off"
+          class="form-control form-input" />
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <label for="municipalRegistration">Inscrição municipal</label>
+        <input type="text" formControlName="municipalRegistration" id="municipalRegistration" autocomplete="off"
+          class="form-control form-input" />
+      </div>
+    </div>
+  </div> <!-- </form-group> -->
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <label for="address">Endereço*</label>
+        <input type="text" formControlValidation formControlDisplayName="endereço" formControlName="address"
+          id="address" autocomplete="off" class="form-control form-input" />
+        <div class="invalid-feedback"></div>
+      </div>
+      <div class="col-sm-12 col-md-3">
+        <label for="addressNumber">Número*</label>
+        <input type="number" formControlValidation formControlDisplayName="número" formControlName="addressNumber"
+          id="addressNumber" autocomplete="off" class="form-control form-input" />
+        <div class="invalid-feedback"></div>
+      </div>
+      <div class="col-sm-12 col-md-3">
+        <label for="complement">Complemento</label>
+        <input type="text" formControlName="complement" id="complement" autocomplete="off"
+          class="form-control form-input" />
+      </div>
+    </div> <!-- </row> -->
+  </div> <!-- </form-group> -->
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12 col-md-3">
+        <label for="zipCode">CEP*</label>
+        <input type="text" formControlValidation formControlDisplayName="CEP" formControlName="zipCode" id="zipCode"
+          autocomplete="off" class="form-control form-input" mask='00000-000' />
+        <div class="invalid-feedback"></div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <label for="neighborhood">Bairro</label>
+        <input type="text" formControlName="neighborhood" id="neighborhood" autocomplete="off"
+          class="form-control form-input" />
+      </div>
+      <div class="col-sm-12 col-md-3">
+        <label for="city">Cidade*</label>
+        <input type="text" formControlValidation formControlDisplayName="cidade" formControlName="city" id="city"
+          autocomplete="off" class="form-control form-input" />
+        <div class="invalid-feedback"></div>
+      </div>
+      <div class="col-sm-12 col-md-2">
+        <label for="state">Estado*</label>
+        <select id="state" name="state" formControlValidation formControlDisplayName="estado" formControlName="state"
+          class="form-control form-input">
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+        <div class="invalid-feedback"></div>
+      </div>
+    </div> <!-- </row> -->
+  </div> <!-- </form-group> -->
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <label for="email">E-mail*</label>
+        <input type="email" formControlValidation formControlDisplayName="e-mail" formControlName="email" id="email"
+          autocomplete="off" class="form-control form-input" />
+        <div class="invalid-feedback"></div>
+      </div>
+      <div class="col-sm-12 col-md-3">
+        <label for="telephone">Telefone*</label>
+        <input type="text" formControlValidation formControlDisplayName="telefone" formControlName="telephone"
+          id="telephone" autocomplete="off" class="form-control form-input" mask='(00)00000-0000' />
+        <div class="invalid-feedback"></div>
+      </div>
+      <div class="col-sm-12 col-md-3">
+        <label for="telephone2">Telefone 2</label>
+        <input type="text" formControlName="telephone2" id="telephone2" autocomplete="off"
+          class="form-control form-input" mask='(00)00000-0000' />
+      </div>
+    </div> <!-- </row> -->
+  </div> <!-- </form-group> -->
+  <p style="text-align: right" class="mt-4">
+    <small>Os campos marcados com asterisco(*) são de preenchimento obrigatório.</small>
+  </p>
+</form>

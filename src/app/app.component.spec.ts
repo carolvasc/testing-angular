@@ -1,35 +1,26 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormComponent } from './form/form.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterTestingModule, ReactiveFormsModule, FormsModule],
+      declarations: [AppComponent, FormComponent],
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
+  test('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(app).toBeDefined();
   });
 
-  it(`should have as title 'testing-angular'`, () => {
+  test(`should have as title 'testing-angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('testing-angular');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to testing-angular!');
   });
 });
