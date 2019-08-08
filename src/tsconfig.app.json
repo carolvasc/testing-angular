@@ -2,9 +2,10 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
+    "esModuleInterop": true,
     "types": []
   },
   "exclude": [
     "**/*.spec.ts"
-  ]
+  ],
 }
