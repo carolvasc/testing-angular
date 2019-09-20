@@ -16,15 +16,15 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.form = this.fb.group({
       email: ['', [Validators.required, Validators.pattern("[^ @]*@[^ @]*")]],
-      senha: ['', [Validators.required, Validators.minLength(8)]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
     });
   }
 
   login() {
-    console.log(`Login ${this.form.value}`);
+    console.log('Login ', JSON.stringify(this.form.value));
     if (this.form.valid) {
       this.loggedIn.emit(
-        new User(this.form.value.email, this.form.value.senha)
+        new User(this.form.value.email, this.form.value.password)
       )
     }
   }
