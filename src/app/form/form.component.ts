@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  clientForm: FormGroup;
+  @Input() clientForm: FormGroup;
 
   constructor(private fb: FormBuilder) { }
 
